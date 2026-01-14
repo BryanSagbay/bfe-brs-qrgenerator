@@ -21,7 +21,7 @@ export const qrService = {
       const response = await axios.get(`${API_URL}/health`);
       return response.data;
     } catch (error) {
-      throw new Error('Backend no disponible');
+      throw new Error(error || 'Backend no disponible');
     }
   }
 };
