@@ -17,7 +17,6 @@ cd frontend
 npm install
 npm run dev
 ```
-
 ## 📝 Variables de Entorno
 
 Crear **backend/.env**:
