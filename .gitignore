@@ -209,3 +209,4 @@ __marimo__/
 node_modules
 gitignore
 .env
+.vscode
