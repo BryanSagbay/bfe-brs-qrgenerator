@@ -10,17 +10,6 @@ qr_gen = QRGenerator()
 def generate_qr():
     """
     Endpoint para generar código QR
-    Body: {
-        "url": "https://example.com",
-        "options": {
-            "fillColor": "#000000",
-            "backColor": "#ffffff",
-            "errorLevel": "M",
-            "boxSize": 10,
-            "border": 4
-        },
-        "logo": "base64_image_string" (opcional)
-    }
     """
     try:
         data = request.get_json()
@@ -32,6 +21,10 @@ def generate_qr():
         options = data.get('options', {})
         logo_base64 = data.get('logo')
         
+        # Si hay logo, forzar nivel de corrección alto
+        if logo_base64:
+            options['errorLevel'] = 'H'
+        
         # Generar QR básico
         qr_image = qr_gen.generate_qr(url, options)
         
@@ -39,7 +32,8 @@ def generate_qr():
         if logo_base64:
             try:
                 logo_image = qr_gen.base64_to_image(logo_base64)
-                qr_image = qr_gen.add_logo_to_qr(qr_image, logo_image)
+                # Usar 20% del tamaño para el logo
+                qr_image = qr_gen.add_logo_to_qr(qr_image, logo_image, logo_size_percent=0.2)
             except Exception as e:
                 return jsonify({'error': f'Error procesando logo: {str(e)}'}), 400
         
