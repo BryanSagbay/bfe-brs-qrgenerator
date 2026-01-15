@@ -31,8 +31,9 @@ export default function ConfigPanel({
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-6">
-      <h2 className="text-2xl font-semibold mb-6 text-gray-800">
+    <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+      <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+        <div className="w-1 h-6 bg-gradient-to-b from-indigo-500 to-purple-500 rounded-full"></div>
         Configuración
       </h2>
 
@@ -46,7 +47,7 @@ export default function ConfigPanel({
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="https://ejemplo.com"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+          className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-indigo-500 focus:outline-none"
         />
       </div>
 

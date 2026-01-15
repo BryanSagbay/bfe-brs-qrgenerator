@@ -43,34 +43,35 @@ export default function QRGenerator() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 p-4 md:p-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">
-            Generador de Códigos QR
-          </h1>
-          <p className="text-gray-600">
-            Crea códigos QR personalizados con logo y colores
-          </p>
-        </div>
+  <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 p-4 md:p-8">
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-8">
+        <h1 className="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-3">
+          Generador de Códigos QR
+        </h1>
+        <p className="text-gray-600 text-lg">
+          Crea códigos QR personalizados con logo y colores
+        </p>
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <ConfigPanel
-            url={url}
-            setUrl={setUrl}
-            logo={logo}
-            setLogo={setLogo}
-            qrColor={qrColor}
-            setQrColor={setQrColor}
-            bgColor={bgColor}
-            setBgColor={setBgColor}
-            qrSize={qrSize}
-            setQrSize={setQrSize}
-            errorLevel={errorLevel}
-            setErrorLevel={setErrorLevel}
-            onReset={handleReset}
-          />
+      <div className="grid lg:grid-cols-2 gap-8 items-start">
+        <ConfigPanel
+          url={url}
+          setUrl={setUrl}
+          logo={logo}
+          setLogo={setLogo}
+          qrColor={qrColor}
+          setQrColor={setQrColor}
+          bgColor={bgColor}
+          setBgColor={setBgColor}
+          qrSize={qrSize}
+          setQrSize={setQrSize}
+          errorLevel={errorLevel}
+          setErrorLevel={setErrorLevel}
+          onReset={handleReset}
+        />
 
+        <div className="sticky top-8">
           <PreviewPanel
             qrDataUrl={qrDataUrl}
             qrSize={qrSize}
@@ -80,5 +81,6 @@ export default function QRGenerator() {
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 }

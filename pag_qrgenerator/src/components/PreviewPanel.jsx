@@ -12,7 +12,7 @@ export default function PreviewPanel({ qrDataUrl, qrSize, loading, error }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-6">
+    <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
       <h2 className="text-2xl font-semibold mb-6 text-gray-800">
         Vista Previa
       </h2>
@@ -40,8 +40,7 @@ export default function PreviewPanel({ qrDataUrl, qrSize, loading, error }) {
             </div>
             <button
               onClick={downloadQR}
-              className="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all flex items-center justify-center gap-2 font-medium shadow-lg"
-            >
+              className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
               <Download size={20} />
               Descargar QR
             </button>
