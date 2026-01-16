@@ -5,6 +5,7 @@ set -e
 echo "Inicializando servicios..."
 
 # === RUTAS ===
+#Modificar la direccion segun donde tenga el repositorio clonado
 PYTHON_DIR="/Users/bryansagbay/Documents/Personal Project/bfe-brs-qrgenerator/neg_qrgenerator"
 REACT_DIR="/Users/bryansagbay/Documents/Personal Project/bfe-brs-qrgenerator/pag_qrgenerator"
 
