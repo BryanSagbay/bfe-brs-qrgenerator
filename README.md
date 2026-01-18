@@ -39,7 +39,7 @@ Generador de códigos QR personalizados con soporte para logos y múltiples opci
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/tu-usuario/bfe-brs-qrgenerator.git
+git clone https://github.com/BryanSagbay/bfe-brs-qrgenerator.git
 cd bfe-brs-qrgenerator
 ```
 
@@ -220,7 +220,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ## 👥 Autores
 
-- **Bryan Sagbay** - *Trabajo Inicial* - [tu-usuario](https://github.com/BryanSagbay)
+- **Bryan Sagbay** - *Trabajo Inicial* - [BryanSagbay](https://github.com/BryanSagbay)
 
 ## 🙏 Agradecimientos
 
